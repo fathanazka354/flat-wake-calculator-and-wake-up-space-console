@@ -1,22 +1,29 @@
 package ui.luasmenu;
 
 import core.BaseApp;
-import utils.OperasiDuaDimensi;
+import core.repository.OperasiBangunRepository;
 
 import java.util.Scanner;
 
 public class Lingkaran extends BaseApp {
+    private String name;
+
     Lingkaran(){
         onStart();
     }
+
+    public Lingkaran(String name) {
+        this.name = name;
+        onStart();
+    }
+
     @Override
     protected void create(Scanner scanner) {
         templateAwal();
         System.out.print("Masukkan jari-jari: ");
         double jari_jari = Double.parseDouble(scanner.nextLine());
         double phi = 22/7;
-        OperasiDuaDimensi operasiDuaDimensi = OperasiDuaDimensi.getInstance();
-        double result = operasiDuaDimensi.hitungLuasLingkaran(phi, jari_jari);
+        double result = OperasiBangunRepository.getInstance().getResultLingkaran(phi, jari_jari);
         templateRumus(phi, jari_jari, result);
 
         System.out.print("ketik 0 untuk keluar");
@@ -28,7 +35,7 @@ public class Lingkaran extends BaseApp {
 
     private void templateAwal(){
         System.out.println("----------------------------");
-        System.out.println("Anda memilih Lingkaran");
+        System.out.println("Anda memilih "+name);
         System.out.println("----------------------------");
         System.out.println("");
     }

@@ -1,4 +1,3 @@
-import core.models.TigaDimensi;
 import ui.firstmenu.FirstMenu;
 
 public class Main {

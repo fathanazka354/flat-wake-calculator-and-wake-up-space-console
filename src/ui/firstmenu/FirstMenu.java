@@ -1,8 +1,6 @@
 package ui.firstmenu;
 
 import core.BaseApp;
-import core.models.DuaDimensi;
-import core.models.TigaDimensi;
 import ui.luasmenu.LuasMenu;
 import ui.volumemenu.VolumeMenu;
 
@@ -10,8 +8,6 @@ import java.util.Scanner;
 
 public class FirstMenu extends BaseApp {
 
-    TigaDimensi[] arrVolume = {new TigaDimensi("Kubus"),new TigaDimensi("Balok"),new TigaDimensi("Tabung")};
-    DuaDimensi[] arrLuas = { new DuaDimensi("Persegi"),new DuaDimensi("Lingkaran"),new DuaDimensi("Segitiga"),new DuaDimensi("Persegi Panjang")};
     public FirstMenu(){
         onStart();
     }
@@ -19,12 +15,12 @@ public class FirstMenu extends BaseApp {
     @Override
     protected void create(Scanner scanner) {
         templateAwal();
-        Integer pilihan = Integer.valueOf(scanner.next());
+        int pilihan = Integer.parseInt(scanner.nextLine());
         switch (pilihan){
             case 1:
-                new LuasMenu(arrLuas);
+                new LuasMenu();
             case 2:
-                new VolumeMenu(arrVolume);
+                new VolumeMenu();
             case 3:
                 onDestroy();
             default:

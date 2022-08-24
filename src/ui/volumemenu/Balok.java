@@ -1,14 +1,22 @@
 package ui.volumemenu;
 
 import core.BaseApp;
-import utils.OperasiTigaDimensi;
+import core.repository.OperasiBangunRepository;
 
 import java.util.Scanner;
 
 public class Balok extends BaseApp {
+    private String name;
+
     Balok(){
         onStart();
     }
+
+    public Balok(String name) {
+        this.name = name;
+        onStart();
+    }
+
     @Override
     protected void create(Scanner scanner) {
         templateAwal();
@@ -20,8 +28,7 @@ public class Balok extends BaseApp {
         System.out.print("Masukkan tinggi: ");
         int tinggi = Integer.parseInt(scanner.nextLine());
 
-        OperasiTigaDimensi operasiTigaDimensi = OperasiTigaDimensi.getInstance();
-        int result = operasiTigaDimensi.volumeBalok(panjang,lebar,tinggi);
+        int result = OperasiBangunRepository.getInstance().getResultBalok(panjang,lebar,tinggi);
 
         templateRumus(panjang, lebar, tinggi, result);
 
@@ -34,7 +41,7 @@ public class Balok extends BaseApp {
 
     private void templateAwal(){
         System.out.println("----------------------------");
-        System.out.println("Anda memilih persegi panjang");
+        System.out.println("Anda memilih "+ name);
         System.out.println("----------------------------");
         System.out.println("");
     }

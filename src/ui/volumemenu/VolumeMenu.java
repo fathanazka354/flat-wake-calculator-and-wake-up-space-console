@@ -7,15 +7,11 @@ import ui.firstmenu.FirstMenu;
 import java.util.Scanner;
 
 public class VolumeMenu extends BaseApp {
-    TigaDimensi[] arrVolume;
+    TigaDimensi[] arrVolume = {new TigaDimensi("Kubus"),new TigaDimensi("Balok"),new TigaDimensi("Tabung")};
     public VolumeMenu() {
         onStart();
     }
 
-    public VolumeMenu(TigaDimensi[] arr) {
-        this.arrVolume = arr;
-        onStart();
-    }
 
     @Override
     protected void create(Scanner scanner) {
@@ -25,18 +21,17 @@ public class VolumeMenu extends BaseApp {
             case 0:
                 new FirstMenu();
             case 1:
-                new Kubus(pilihan);
+                new Kubus(arrVolume[0].getName());
             case 2:
-                new Balok();
+                new Balok(arrVolume[1].getName());
             case 3:
-                new Tabung();
+                new Tabung(arrVolume[2].getName());
             default:
                 System.out.println("pilihan tidak ada");
         }
     }
 
     private void templateAwal() {
-//        TigaDimensi[] arr = {new TigaDimensi("Kubus"),new TigaDimensi("Balok"),new TigaDimensi("Tabung"),};
         System.out.println("-----------------------------");
         System.out.println("Pilih bidang yang akan dihitung");
         System.out.println("-----------------------------");

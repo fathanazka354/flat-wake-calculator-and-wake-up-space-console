@@ -1,20 +1,28 @@
 package ui.luasmenu;
 
 import core.BaseApp;
-import utils.OperasiDuaDimensi;
+import core.repository.OperasiBangunRepository;
 
 import java.util.Scanner;
 
 public class Persegi extends BaseApp {
+    private String name;
+
     Persegi(){
         onStart();
     }
+
+    public Persegi(String name) {
+        this.name = name;
+        onStart();
+    }
+
     @Override
     protected void create(Scanner scanner) {
         templateAwal();
         System.out.print("Masukkan sisi: ");
         int sisi = Integer.parseInt(scanner.nextLine());
-        int result = OperasiDuaDimensi.getInstance().hitungLuasPersegi(sisi);
+        int result = OperasiBangunRepository.getInstance().getResultPersegi(sisi);
         templateRumus(sisi,result);
 
         System.out.print("ketik 0 untuk keluar");
@@ -25,7 +33,7 @@ public class Persegi extends BaseApp {
     }
     private void templateAwal(){
         System.out.println("----------------------------");
-        System.out.println("Anda memilih Persegi");
+        System.out.println("Anda memilih "+name);
         System.out.println("----------------------------");
         System.out.println();
     }

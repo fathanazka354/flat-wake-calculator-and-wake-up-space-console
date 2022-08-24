@@ -2,24 +2,28 @@ package ui.volumemenu;
 
 import core.BaseApp;
 import core.models.TigaDimensi;
-import utils.OperasiTigaDimensi;
+import core.repository.OperasiBangunRepository;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class Kubus extends BaseApp {
-    int pilihan;
-    Kubus(int pilihan){
-        this.pilihan = pilihan;
+    String name;
+    Kubus(){
         onStart();
     }
+
+    public Kubus(String name) {
+        this.name = name;
+        onStart();
+    }
+
     @Override
     protected void create(Scanner scanner) {
         templateAwal();
         System.out.print("Masukkan sisi: ");
         int sisi = Integer.parseInt(scanner.nextLine());
-        OperasiTigaDimensi operasiTigaDimensi = OperasiTigaDimensi.getInstance();
-        int result = operasiTigaDimensi.volumeKubus(sisi);
+        int result = OperasiBangunRepository.getInstance().getResultKubus(sisi);
         templateRumus(sisi, result);
         System.out.print("ketik 0 untuk keluar");
         int keluar = Integer.parseInt(scanner.nextLine());
@@ -32,7 +36,7 @@ public class Kubus extends BaseApp {
 
     private void templateAwal(){
         System.out.println("----------------------------");
-        System.out.println("Anda memilih Kubus"+ Arrays.toString(new TigaDimensi[pilihan]));
+        System.out.println("Anda memilih "+ name);
         System.out.println("----------------------------");
         System.out.println();
     }

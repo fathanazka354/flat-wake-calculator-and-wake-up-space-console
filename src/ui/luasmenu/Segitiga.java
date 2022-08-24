@@ -1,14 +1,22 @@
 package ui.luasmenu;
 
 import core.BaseApp;
-import utils.OperasiDuaDimensi;
+import core.repository.OperasiBangunRepository;
 
 import java.util.Scanner;
 
 public class Segitiga extends BaseApp {
+    private String name;
+
     Segitiga(){
         onStart();
     }
+
+    public Segitiga(String name) {
+        this.name = name;
+        onStart();
+    }
+
     @Override
     protected void create(Scanner scanner) {
         templateAwal();
@@ -17,7 +25,7 @@ public class Segitiga extends BaseApp {
 
         System.out.print("Masukkan tinggi: ");
         int tinggi = Integer.parseInt(scanner.nextLine());
-        int result = OperasiDuaDimensi.getInstance().hitungLuasSegitiga(alas,tinggi);
+        int result = OperasiBangunRepository.getInstance().getResultSegitiga(alas,tinggi);
         templateRumus(alas,tinggi,result);
         System.out.print("ketik 0 untuk keluar");
         int keluar = Integer.parseInt(scanner.nextLine());
@@ -27,7 +35,7 @@ public class Segitiga extends BaseApp {
     }
     private void templateAwal(){
         System.out.println("----------------------------");
-        System.out.println("Anda memilih Segitiga");
+        System.out.println("Anda memilih "+name);
         System.out.println("----------------------------");
         System.out.println();
     }

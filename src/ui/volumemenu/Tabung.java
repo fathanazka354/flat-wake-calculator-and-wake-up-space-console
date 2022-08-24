@@ -1,12 +1,15 @@
 package ui.volumemenu;
 
 import core.BaseApp;
-import utils.OperasiTigaDimensi;
+import core.repository.OperasiBangunRepository;
 
 import java.util.Scanner;
 
 public class Tabung extends BaseApp {
-    Tabung(){
+    private final String name;
+
+    Tabung(String name){
+        this.name = name;
         onStart();
     }
     @Override
@@ -16,9 +19,8 @@ public class Tabung extends BaseApp {
         double jariJari = Double.parseDouble(scanner.nextLine());
         System.out.print("Masukkan tinggi: ");
         int tinggi = Integer.parseInt(scanner.nextLine());
-        OperasiTigaDimensi operasiTigaDimensi = OperasiTigaDimensi.getInstance();
         double phi = 22/7;
-        double result  = operasiTigaDimensi.volumeTabung(phi,jariJari,tinggi);
+        double result  = OperasiBangunRepository.getInstance().getResultTabung(phi,jariJari,tinggi);
         templateRumus(phi,jariJari,tinggi,result);
         System.out.print("ketik 0 untuk keluar");
         int keluar = Integer.parseInt(scanner.nextLine());
@@ -29,7 +31,7 @@ public class Tabung extends BaseApp {
     }
     private void templateAwal(){
         System.out.println("----------------------------");
-        System.out.println("Anda memilih Tabung");
+        System.out.println("Anda memilih "+ name);
         System.out.println("----------------------------");
         System.out.println();
     }
