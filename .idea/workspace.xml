@@ -1,29 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f28959f4-ad23-476e-a6be-a18bf318924b" name="Changes" comment="membuat kalkulator bangun datar dan bangun ruang">
+    <list default="true" id="f28959f4-ad23-476e-a6be-a18bf318924b" name="Changes" comment="menyempurnakan kalkulator berbentuk console bangun datar dan bangun ruang">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/repository/DuaDimensiRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/repository/OperasiBangunRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/repository/IDuaDimensiRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/repository/ITigaDimensiRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/repository/TigaDimensiRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/Constant.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/ICallableFunction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/MainViewModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/firstmenu/FirstMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/firstmenu/FirstMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/luasmenu/Lingkaran.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/luasmenu/Lingkaran.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/luasmenu/LuasMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/luasmenu/LuasMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/luasmenu/Persegi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/luasmenu/Persegi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/luasmenu/PersegiPanjang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/luasmenu/PersegiPanjang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/luasmenu/Segitiga.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/luasmenu/Segitiga.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/volumemenu/Balok.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/volumemenu/Balok.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/volumemenu/Kubus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/volumemenu/Kubus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/volumemenu/Tabung.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/volumemenu/Tabung.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/volumemenu/VolumeMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/volumemenu/VolumeMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/IOperasiDuaDimensi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/IOperasiTigaDimensi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/OperasiDuaDimensi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/OperasiTigaDimensi.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +71,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661322667661</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="menyempurnakan kalkulator berbentuk console bangun datar dan bangun ruang">
+      <created>1661327679460</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1661327679460</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -108,6 +94,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="membuat kalkulator bangun datar dan bangun ruang" />
-    <option name="LAST_COMMIT_MESSAGE" value="membuat kalkulator bangun datar dan bangun ruang" />
+    <MESSAGE value="menyempurnakan kalkulator bangun datar dan bangun ruang" />
+    <MESSAGE value="menyempurnakan kalkulator berbentuk console bangun datar dan bangun ruang" />
+    <option name="LAST_COMMIT_MESSAGE" value="menyempurnakan kalkulator berbentuk console bangun datar dan bangun ruang" />
   </component>
 </project>
